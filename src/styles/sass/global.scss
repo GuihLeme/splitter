@@ -1,0 +1,35 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --light-strong-cyan: #9fe8df;
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --desatured-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-desatured-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light-grayish-cyan);
+}
+
+body, input, button {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+
+
