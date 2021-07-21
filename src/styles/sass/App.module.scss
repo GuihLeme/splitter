@@ -8,24 +8,39 @@
 
 
   .content {
-    margin-top: 5.625rem;
-    gap: 1rem;
+    width: auto;
+    height: auto;
+
+    margin-top: 5.5rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+    padding: 1.5rem;
+
+    border-radius: 1.5rem;
+    background: var(--white);
+
 
     .controls {
       width: 26.25rem;
       height: 26.25rem;
-      background: var(--white);
       padding: 1rem;
 
-      h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      h2 {
         font-size: 1rem;
         color: var(--dark-grayish-cyan);
 
         margin: 1rem 0;
       }
 
-      h1:first-child {
+      h2:first-child {
         margin: 0 0 1rem 0;
       }
 
@@ -41,11 +56,96 @@
     }
   }
 
-  .totals {
+  .totalPanel {
     width: 26.25rem;
     height: 26.25rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
     padding: 1rem;
+    border-radius: .5rem;
     background: var(--very-dark-cyan);
+
+    padding: 2rem;
+
+    .totals {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      width: 100%;
+
+      .tipAmount,
+      .total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+
+          h2 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--white);
+          }
+
+          span {
+            font-size: 0.75rem;
+            color: var(--desatured-grayish-cyan);
+          }
+        }
+
+        h1 {
+          font-size: 3rem;
+          font-weight: 400;
+          color: var(--strong-cyan);
+        }
+      }
+    }
+
+    .reset,
+    .disabled {
+      width: 100%;
+      height: 3rem;
+
+      font-size: 1.25rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: none;
+      border-radius: .25rem;
+
+      text-transform: uppercase;
+    }
+
+    .disabled {
+      background: #0d686d;
+      color: #045b62;
+      cursor: not-allowed;
+    }
+
+    .reset {
+      background: var(--strong-cyan);
+      color: var(--very-dark-cyan);
+
+      transition: all .2s;
+
+      &:hover {
+        background: var(--light-strong-cyan);
+        cursor: pointer;
+      }
+    }
   }
 }
+
+
